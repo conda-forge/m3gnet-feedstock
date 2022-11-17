@@ -1,5 +1,5 @@
 {% set name = "m3gnet" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9a6cecc58d9f938aef05bdaaafb0188f393985c6179406c2850d26391eed6762
+  sha256: 25b9d514af2aa89b6793c2c68f3f817937fb535df6a0f7bb25c6bcf5e08d0ef1
 
 
 build:
