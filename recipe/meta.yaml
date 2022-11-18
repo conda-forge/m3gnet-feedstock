@@ -1,5 +1,5 @@
 {% set name = "m3gnet" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0345d64e9add2da5838e85341843ae128bd34f91cb4f0cc4df8a6749c611caf5
-
+  sha256: c5c9bf7e687082b4c449a30a325b23175df55d72511f2e97fdcda2cddea6b5db
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -21,12 +20,10 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy >=1.20.1                         # [build_platform != target_platform]
-    - {{ compiler('cxx') }}
   host:
     - python
     - pip
     - setuptools >=18.0
-    - cython
     - numpy >=1.20.1
   run:
     - python
