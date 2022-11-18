@@ -9,7 +9,6 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: c5c9bf7e687082b4c449a30a325b23175df55d72511f2e97fdcda2cddea6b5db
 
-
 build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -21,12 +20,10 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy >=1.20.1                         # [build_platform != target_platform]
-    - {{ compiler('cxx') }}
   host:
     - python
     - pip
     - setuptools >=18.0
-    - cython
     - numpy >=1.20.1
   run:
     - python
